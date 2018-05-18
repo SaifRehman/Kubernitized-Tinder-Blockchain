@@ -1,4 +1,5 @@
 require('dotenv').config({path: ".env-node2"});
+
 let lotion = require('lotion')
 let app = lotion({
   genesis: './genesis.json',
