@@ -27,10 +27,10 @@ spec:
    run: tendermint2
  ports:
   - protocol: TCP
-    name: tendermint
-    port: 30090  # it shall be 8545 and no other port !!!!!
-    nodePort: 30090  # Give a port to access the application publically
+    name: tendermintRPCport
+    port: 30092 
+    nodePort: 30092
   - protocol: TCP
-    name: port
-    port: 30092  # it shall be 8545 and no other port !!!!!
-    nodePort: 30092  # Give a port to access the application publically
+    name: tendermintPeerPort
+    port: 30093 
+    nodePort: 30093 
