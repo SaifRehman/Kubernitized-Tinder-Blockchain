@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -22,7 +21,24 @@ type UserLocation struct {
 
 var users []User
 
+func main() {
+	router := mux.NewRouter().StrictSlash(true)
+	users = append(users, User{ID: "1", Name: "Nic", Gender: "Male", Age: 23, UserLocation: &UserLocation{Lat: 54.234, Long: 55.234}})
+	router.HandleFunc("/all", GetAllUserEndpoint).Methods("GET")
+	router.HandleFunc("/user/{id}", GetUserEndpoint).Methods("GET")
+	router.HandleFunc("/create", CreateUserEndpoint).Methods("POST")
+	router.HandleFunc("/delete/{id}", DeleteUserEndpoint).Methods("DELETE")
+	http.ListenAndServe(":8888", router)
+}
+
+func GetAllUserEndpoint(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(users)
+
+}
+
 func GetUserEndpoint(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(req)
 	for _, item := range users {
 		if item.ID == params["id"] {
@@ -34,12 +50,8 @@ func GetUserEndpoint(w http.ResponseWriter, req *http.Request) {
 
 }
 
-func GetAllUserEndpoint(w http.ResponseWriter, req *http.Request) {
-	json.NewEncoder(w).Encode(users)
-
-}
-
 func CreateUserEndpoint(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 	var user User
 	_ = json.NewDecoder(req.Body).Decode(&user)
 	users = append(users, user)
@@ -47,6 +59,7 @@ func CreateUserEndpoint(w http.ResponseWriter, req *http.Request) {
 }
 
 func DeleteUserEndpoint(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 	params := mux.Vars(req)
 	for index, item := range users {
 		if item.ID == params["id"] {
@@ -55,13 +68,4 @@ func DeleteUserEndpoint(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 	json.NewEncoder(w).Encode(users)
-}
-
-func main() {
-	router := mux.NewRouter()
-	router.HandleFunc("/allUser", GetUserEndpoint).Methods("GET")
-	router.HandleFunc("/user/{id}", GetAllUserEndpoint).Methods("GET")
-	router.HandleFunc("/createUser", CreateUserEndpoint).Methods("POST")
-	router.HandleFunc("/deleteUser/{id}", DeleteUserEndpoint).Methods("DELETE")
-	log.Fatal(http.ListenAndServe(":8080", router))
 }
