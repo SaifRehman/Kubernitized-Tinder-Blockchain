@@ -18,7 +18,7 @@ func main() {
 
 func LocationService(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	client := geo.NewGoogleGeo("api-key")
+	client := geo.NewGoogleGeo("AIzaSyADmhWTORfjBc-EVYP5RyP3XPC-gzEFZGs")
 	res, _ := client.Geolocate()
 	fmt.Println(res)
 	json.NewEncoder(w).Encode(res)

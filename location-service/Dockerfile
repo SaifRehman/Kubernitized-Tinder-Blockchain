@@ -1,7 +1,8 @@
 FROM golang:1.9.2 as builder
 ARG SOURCE_LOCATION=/
 WORKDIR ${SOURCE_LOCATION}
-RUN go get -d -v github.com/gorilla/mux
+RUN go get -d -v github.com/gorilla/mux \
+    go get -d -v github.com/martinlindhe/google-geolocate
 COPY main.go .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 FROM alpine:latest  

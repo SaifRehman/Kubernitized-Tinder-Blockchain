@@ -1,1 +1,1 @@
-# Tinder on Kubernitized Proof of Stake Blockchain using Tendermint and LotionJs
+#  Kubernitized Proof of Stake Blockchain on ICP

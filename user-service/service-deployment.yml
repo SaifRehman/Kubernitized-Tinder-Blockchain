@@ -12,7 +12,7 @@ spec:
    spec:
      containers:
        - name: userServiceContainer
-         image: "registry.eu-de.bluemix.net/tendermint3/node2" # your registery name
+         image: "user-service-image" # your registery name
          imagePullPolicy: Always
 ---
 apiVersion: v1
