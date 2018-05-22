@@ -1,8 +1,13 @@
-# iron/go:dev is the alpine image with the go tools added
-FROM iron/go:dev
-WORKDIR /app
-ENV SRC_DIR=/Users/saifrehman/go/src/github.com
-ADD . $SRC_DIR
-EXPOSE 1234
-RUN cd $SRC_DIR; go build -o app; cp app /app/
-ENTRYPOINT ["./app"]
+FROM golang:1.9.2 as builder
+ARG SOURCE_LOCATION=/
+WORKDIR ${SOURCE_LOCATION}
+RUN go get -d -v github.com/gorilla/mux
+COPY main.go .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+FROM alpine:latest  
+ARG SOURCE_LOCATION=/
+RUN apk --no-cache add curl
+EXPOSE 8888
+WORKDIR /root/
+COPY --from=builder ${SOURCE_LOCATION} .
+CMD ["./app"] 
