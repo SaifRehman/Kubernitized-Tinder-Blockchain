@@ -20,6 +20,12 @@ type UserLocation struct{
 }
 var users [] User
 func GetUserEndpoint(w http.ResponseWriter, req *http.Request){
+	params:=mux.Vars(req)
+	for _, item := range people {
+		if item.ID == params["id"]{
+			json.NewEncoder(w).Encode(item)
+		}
+	}
 
 }
 
@@ -39,7 +45,7 @@ func main(){
 	 router:=mux.NewRouter()
 	 router.HandleFunc("/allUser",GetUserEndpoint).Methods("GET")
 	 router.HandleFunc("/user/{id}",GetAllUserEndpoint).Methods("GET")
-	 router.HandleFunc("/user/{id}",CreateUserEndpoint).Methods("POST")
-	 router.HandleFunc("/user/{id}",DeleteUserEndpoint).Methods("DELETE")
+	 router.HandleFunc("/createUser/{id}",CreateUserEndpoint).Methods("POST")
+	 router.HandleFunc("/deleteUser/{id}",DeleteUserEndpoint).Methods("DELETE")
 	 log.Fatal(http.ListenAndServe(:8080,router))
 }
