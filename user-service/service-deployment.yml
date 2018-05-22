@@ -1,32 +1,32 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
- name: tendermintnodetwo # give any name
+ name: user-service # give any name
 spec:
  replicas: 1
  template:
    metadata:
-     name: tendermintnodetwo
+     name: user-service
      labels:
-       run: tendermint3
+       run: userservice
    spec:
      containers:
-       - name: saif1cluster
+       - name: userServiceContainer
          image: "registry.eu-de.bluemix.net/tendermint3/node2" # your registery name
          imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
- name: my-service-tendermint-11 # give a service name
+ name: userservice # give a service name
  labels:
-   run: tendermint3
+   run: userservice
 spec:
  type: NodePort
  selector:
-   run: tendermint3
+   run: userservice
  ports:
   - protocol: TCP
-    name: tendermint
+    name: userservice
     port: 1234  
     nodePort: 30090
