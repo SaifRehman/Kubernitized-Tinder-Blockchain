@@ -11,14 +11,14 @@ spec:
        run: tendermint1
    spec:
      containers:
-       - name: saif1cluster
-         image: "registry.eu-de.bluemix.net/<namespace>/node2" # your registery name
+       - name: node1
+         image: "imagename" # your registery name
          imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
- name: my-service-tendermint-11 # give a service name
+ name: my-service-tendermint-1 # give a service name
  labels:
    run: tendermint1
 spec:

@@ -8,23 +8,23 @@ spec:
    metadata:
      name: tendermintnodetwo
      labels:
-       run: tendermint3
+       run: tendermint2
    spec:
      containers:
-       - name: saif1cluster
-         image: "registry.eu-de.bluemix.net/tendermint3/node2" # your registery name
+       - name: node2
+         image: "image2" # your registery name
          imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
- name: my-service-tendermint-11 # give a service name
+ name: my-service-tendermint-2 # give a service name
  labels:
-   run: tendermint3
+   run: tendermint2
 spec:
  type: NodePort
  selector:
-   run: tendermint3
+   run: tendermint2
  ports:
   - protocol: TCP
     name: tendermint
