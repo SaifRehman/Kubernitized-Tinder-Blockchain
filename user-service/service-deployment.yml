@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
- name: userservice # give any name
+ name: tendermintnodetwo # give any name
 spec:
  replicas: 1
  template:
    metadata:
-     name: userservice
+     name: tendermintnodetwo
      labels:
        run: tendermint3
    spec:
      containers:
-       - name: servicecluster
+       - name: saif1cluster
          image: "registry.eu-de.bluemix.net/tendermint3/node2" # your registery name
          imagePullPolicy: Always
 ---
