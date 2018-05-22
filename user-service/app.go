@@ -24,8 +24,10 @@ func GetUserEndpoint(w http.ResponseWriter, req *http.Request){
 	for _, item := range people {
 		if item.ID == params["id"]{
 			json.NewEncoder(w).Encode(item)
+			return
 		}
 	}
+	json.NewEncoder(w).Encode(&User{})
 
 }
 
