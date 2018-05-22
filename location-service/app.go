@@ -12,7 +12,7 @@ import (
 
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/all", LocationService).Methods("GET")
+	router.HandleFunc("/location", LocationService).Methods("GET")
 	http.ListenAndServe(":2222", router)
 }
 
