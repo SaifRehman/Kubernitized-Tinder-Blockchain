@@ -79,9 +79,9 @@ $ kubectl cluster-info
 ```
 $ kubectl cluster-info
 ```
-4. running service-deployment.yaml file
+4. running service-deployment.yml file
 ```
-$ kubectl create -f service-deployment.yaml
+$ kubectl create -f service-deployment.yml
 ```
 
 ## Services
