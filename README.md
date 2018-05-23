@@ -76,3 +76,15 @@ $ kubectl cluster-info
 $ kubectl create -f service-deployment.yaml
 ```
 
+## Services
+1. Blockchain node1
+- [x] Tendermint RPC port 30090
+- [x] Tendermint p2p port 30091
+2. Blockchain node2
+- [x] Tendermint RPC port 30092
+- [x] Tendermint p2p port 30093
+3. User Service
+- [x] port 30094
+4. Location Service
+- [x] port 30095
+
