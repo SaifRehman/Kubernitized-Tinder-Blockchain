@@ -57,13 +57,13 @@ $ docker run -i -t location-service:latest -p 30095:30095
 ```
 $ cd blockchain-validator1
 $ docker build -t blockchain-validator1 .
-$ docker run -i -t blockchain-validator1:latest -p 30090:30090 -p 30091:30091
+$ docker run -i -t -p 30090:30090 -p 30091:30091 blockchain-validator1:latest 
 ```
 4. Creating blockchain-node2
 ```
 $ cd blockchain-validator2
 $ docker build -t blockchain-validator2 .
-$ docker run -i -t blockchain-validator1:latest -p 30092:30092 -p 30093:30093
+$ docker run -i -t -p 30092:30092 -p 30093:30093 blockchain-validator1:latest 
 ```
 
 ## Deploy to minikube
