@@ -28,5 +28,5 @@ spec:
  ports:
   - protocol: TCP
     name: userservice
-    port: 8888  
+    port: 30095  
     nodePort: 30095
