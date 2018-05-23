@@ -33,3 +33,40 @@
 - [ ] Creating cron jobs for matching 
 - [ ] Creating frontend app
 - [ ] Deploying to ICP (IBM Cloud Private)
+
+## Build Docker images
+1. Creating user-service
+```
+$ cd user-service
+$ docker build -t user-service .
+```
+2. Creating location-service
+```
+$ cd location-service
+$ docker build -t location-service .
+> Add google map api key in main.go
+```
+3. Creating blockchain-node1
+```
+$ cd blockchain-validator1
+$ docker build -t blockchain-validator1 .
+```
+4. Creating blockchain-node2
+```
+$ cd blockchain-validator2
+$ docker build -t blockchain-validator2 .
+```
+
+## Deploy to minikube
+1. Start Minikube
+```
+$ minikube start
+```
+2. Get cluster info
+```
+$ kubectl cluster-info
+```
+3. minikube dahsboard
+```
+$ kubectl cluster-info
+```
