@@ -131,7 +131,3 @@ $ minikube ip
 
 ### Blockchain Node2
 * (GET) :30092/ # Tendermint RPC Port
-
-## Authors
-- [Saif ur Rehman](https://www.linkedin.com/in/saif-ur-rehman/)
-- [Areej Essa](https://www.linkedin.com/in/areej-essa-b19336114/)
