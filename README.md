@@ -90,9 +90,9 @@ $ kubectl create -f service-deployment.yaml
 
 ## Apis
 ### User service 
-> (GET) :30095/all
-> (GET) :30095/user/{id}
-> (POST) :30095/create
+* (GET) :30094/all
+* (GET) :30094/user/{id}
+* (POST) :30094/create
 ```JavaScript
    { "id": "1",
     "name": "Matt",
@@ -104,5 +104,13 @@ $ kubectl create -f service-deployment.yaml
     }
    }
 ```
-> (DELETE) :30095/delete/{id}
+* (DELETE) :30094/delete/{id}
 
+### Location service
+* (GET) :30095/location
+
+### Blockchain Node1 
+*  (GET) :30090/ # Tendermint RPC Port
+
+### Blockchain Node2
+* (GET) :30092/ # Tendermint RPC Port
