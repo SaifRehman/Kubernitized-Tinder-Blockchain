@@ -18,7 +18,7 @@
 </p>
 <br>
 
-### Pre Requisites
+## Pre Requisites
 1. Signup to [IBM Cloud](http://ibm.biz/ioblockchain)
 2. Install [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
 3. Install [Bluemix CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)
