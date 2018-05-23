@@ -32,5 +32,5 @@ spec:
     nodePort: 30090 
   - protocol: TCP
     name: tendermintPeerPort
-    port: 300921 
+    port: 30091 
     nodePort: 30091  
