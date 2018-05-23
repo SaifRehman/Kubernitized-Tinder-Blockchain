@@ -30,6 +30,7 @@
 - [x] Creating user service
 - [x] Creating location service
 - [x] Creating Blockchain services
+- [ ] Connecting to real database
 - [ ] Creating cron jobs for matching 
 - [ ] Creating frontend app
 - [ ] Deploying to ICP (IBM Cloud Private)
@@ -74,3 +75,4 @@ $ kubectl cluster-info
 ```
 $ kubectl create -f service-deployment.yaml
 ```
+
