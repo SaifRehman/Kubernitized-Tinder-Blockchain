@@ -1,15 +1,15 @@
-require('dotenv').config({ path: ".env-node1" });
+require('dotenv').config({path: ".env-node3"});
 var geodist = require('geodist')
+
 let lotion = require('lotion')
 let app = lotion({
   genesis: './genesis.json',
-  tendermintPort: 30090,
+  tendermintPort: 4667,
   initialState: { messages: [] },
-  p2pPort: 30091,
+  p2pPort: 4668,
   logTendermint: true,
-  keys: 'privkey0.json',
   createEmptyBlocks: true,
-  peers: ['192.168.99.100:30093']
+  peers: ['ws://192.168.99.100:30091','ws://192.168.99.100:30093']
 })
 app.use((state, tx, chainInfo) => {
   if (tx[0].gender != tx[1].gender && Math.abs(tx[0].age - tx[1].age) <= 4) {

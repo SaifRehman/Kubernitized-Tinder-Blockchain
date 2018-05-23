@@ -12,8 +12,8 @@ spec:
    spec:
      containers:
        - name: node2
-         image: "image2" # your registery name
-         imagePullPolicy: Always
+         image: "blockchain-validator2:latest" # your registery name
+         imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
@@ -27,10 +27,10 @@ spec:
    run: tendermint2
  ports:
   - protocol: TCP
-    name: tendermintRPCport
+    name: tendermintrpcport
     port: 30092 
     nodePort: 30092
   - protocol: TCP
-    name: tendermintPeerPort
+    name: tendermintpeerport
     port: 30093 
     nodePort: 30093 
