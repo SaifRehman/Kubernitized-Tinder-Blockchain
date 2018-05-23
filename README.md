@@ -34,6 +34,7 @@
 - [ ] Creating cron jobs for matching 
 - [ ] Creating frontend app
 - [ ] Deploying to ICP (IBM Cloud Private)
+
 ## Reading images locally
 ```
 $ eval $(minikube docker-env)
