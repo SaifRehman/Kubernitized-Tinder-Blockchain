@@ -63,7 +63,7 @@ $ docker run -i -t -p 30090:30090 -p 30091:30091 blockchain-validator1:latest
 ```
 $ cd blockchain-validator2
 $ docker build -t blockchain-validator2 .
-$ docker run -i -t -p 30092:30092 -p 30093:30093 blockchain-validator1:latest 
+$ docker run -i -t -p 30092:30092 -p 30093:30093 blockchain-validator2:latest 
 ```
 
 ## Deploy to minikube
