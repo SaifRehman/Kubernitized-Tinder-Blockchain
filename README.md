@@ -24,3 +24,4 @@
 3. Install [Bluemix CLI](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started)
 4. Install [Kubernetes CLI](https://kubernetes.io/docs/user-guide/prereqs/)
 5. Install Minikube [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+6. Install Docker [Docker](https://docs.docker.com/install/)
