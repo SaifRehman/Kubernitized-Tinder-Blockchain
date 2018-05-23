@@ -44,13 +44,13 @@ $ eval $(minikube docker-env)
 ```
 $ cd user-service
 $ docker build -t user-service .
-$ docker run -i -t user-service:latest -p 30094:30094
+$ docker run -i -t -p 30094:30094 user-service:latest 
 ```
 2. Creating location-service
 ```
 $ cd location-service
 $ docker build -t location-service .
-$ docker run -i -t location-service:latest -p 30095:30095
+$ docker run -i -t -p 30095:30095 location-service:latest 
 > Add google map api key in main.go
 ```
 3. Creating blockchain-node1
