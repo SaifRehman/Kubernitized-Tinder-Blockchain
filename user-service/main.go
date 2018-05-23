@@ -28,7 +28,7 @@ func main() {
 	router.HandleFunc("/user/{id}", GetUserEndpoint).Methods("GET")
 	router.HandleFunc("/create", CreateUserEndpoint).Methods("POST")
 	router.HandleFunc("/delete/{id}", DeleteUserEndpoint).Methods("DELETE")
-	http.ListenAndServe(":30095", router)
+	http.ListenAndServe(":30094", router)
 }
 
 func GetAllUserEndpoint(w http.ResponseWriter, req *http.Request) {

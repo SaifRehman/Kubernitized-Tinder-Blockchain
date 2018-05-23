@@ -88,3 +88,21 @@ $ kubectl create -f service-deployment.yaml
 4. Location Service
 - [x] port 30095
 
+## Apis
+### User service 
+> (GET) :30095/all
+> (GET) :30095/user/{id}
+> (POST) :30095/create
+```JavaScript
+   { "id": "1",
+    "name": "Matt",
+    "gender": "Male",
+    "age": 23,
+    "userlocation": {
+        "Lat": 54.234,
+        "Long": 55.234
+    }
+   }
+```
+> (DELETE) :30095/delete/{id}
+
