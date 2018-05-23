@@ -13,7 +13,7 @@ import (
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/location", LocationService).Methods("GET")
-	http.ListenAndServe(":30094", router)
+	http.ListenAndServe(":30095", router)
 }
 
 func LocationService(w http.ResponseWriter, req *http.Request) {
