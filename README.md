@@ -18,6 +18,11 @@
 </p>
 <br>
 
+
+## Contributors
+| [<img src="https://pbs.twimg.com/profile_images/969598365716635648/-E0SfuGA_400x400.jpg" width="100px;"/><br /><sub><b>SaifRehman</b></sub>](https://www.linkedin.com/in/saif-ur-rehman/)<br />[💻](https://github.com/SaifRehman/watsonic/commits?author=SaifRehman "Code") [📖](https://github.com/SaifRehman/tendermint-chat-app/commits?author=SaifRehman "Documentation") [🤔](#ideas-keppel "Ideas, Planning, & Feedback") [⚠️](https://github.com/SaifRehman/tendermint-chat-app/commits?author=SaifRehman "Tests") | [<img src="https://media.licdn.com/dms/image/C5603AQGMPj7hzDW7wA/profile-displayphoto-shrink_800_800/0?e=1526047200&v=alpha&t=YdCQCtPQjXGOIv2u_WPVhltCl27o7UxnT6na7B7TjQc" width="100px;"/><br /><sub><b>Jacob Gadikian</b></sub>](https://www.linkedin.com/in/jacobgadikian/)<br />[💻](https://github.com/SaifRehman/tendermint-chat-app/commits?author=faddat "Code") [🤔](#ideas-mappum "Ideas, Planning, & Feedback") [⚠️](https://github.com/SaifRehman/tendermint-chat-app/commits?author=sudoalgorithm "Tests") [🔌](#plugin-mappum "Plugin/utility libraries")
+| :---: | :---: |
+
 ## Pre Requisites
 1. Signup to [IBM Cloud](http://ibm.biz/ioblockchain)
 2. Install [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
@@ -126,3 +131,7 @@ $ minikube ip
 
 ### Blockchain Node2
 * (GET) :30092/ # Tendermint RPC Port
+
+## Authors
+- [Saif ur Rehman](https://www.linkedin.com/in/saif-ur-rehman/)
+- [Areej Essa](https://www.linkedin.com/in/areej-essa-b19336114/)
