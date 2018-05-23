@@ -39,27 +39,31 @@
 ```
 $ eval $(minikube docker-env)
 ```
-## Build Docker images
+## Build and run Docker images
 1. Creating user-service
 ```
 $ cd user-service
 $ docker build -t user-service .
+$ docker run -i -t user-service:latest -p 30094:30094
 ```
 2. Creating location-service
 ```
 $ cd location-service
 $ docker build -t location-service .
+$ docker run -i -t location-service:latest -p 30095:30095
 > Add google map api key in main.go
 ```
 3. Creating blockchain-node1
 ```
 $ cd blockchain-validator1
 $ docker build -t blockchain-validator1 .
+$ docker run -i -t blockchain-validator1:latest -p 30090:30090 -p 30091:30091
 ```
 4. Creating blockchain-node2
 ```
 $ cd blockchain-validator2
 $ docker build -t blockchain-validator2 .
+$ docker run -i -t blockchain-validator1:latest -p 30092:30092 -p 30093:30093
 ```
 
 ## Deploy to minikube
