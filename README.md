@@ -29,7 +29,7 @@
 ## Tasks
 - [x] Creating user service
 - [x] Creating location service
-- [x] Creating Blockchain service
+- [x] Creating Blockchain services
 - [ ] Creating cron jobs for matching 
 - [ ] Creating frontend app
 - [ ] Deploying to ICP (IBM Cloud Private)
