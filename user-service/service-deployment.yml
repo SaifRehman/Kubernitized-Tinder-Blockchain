@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
- name: user-service # give any name
+ name: user-service 
 spec:
  replicas: 1
  template:
@@ -11,14 +11,14 @@ spec:
        run: userservice
    spec:
      containers:
-       - name: userServiceContainer
-         image: "user-service-image" # your registery name
-         imagePullPolicy: Always
+       - name: user-service-container
+         image: "user-service" 
+         imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
 metadata:
- name: userservice # give a service name
+ name: userservice 
  labels:
    run: userservice
 spec:
