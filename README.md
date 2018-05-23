@@ -27,9 +27,9 @@
 6. Install Docker [Docker](https://docs.docker.com/install/)
 
 ## Tasks
-[x] Creating user service
-[x] Creating location service
-[x] Creating Blockchain service
-[ ] Creating cron jobs for matching 
-[ ] Creating frontend app
-[ ] Deploying to ICP (IBM Cloud Private)
+- [x] Creating user service
+- [x] Creating location service
+- [x] Creating Blockchain service
+- [ ] Creating cron jobs for matching 
+- [ ] Creating frontend app
+- [ ] Deploying to ICP (IBM Cloud Private)
