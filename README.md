@@ -77,11 +77,15 @@ $ kubectl cluster-info
 ```
 3. minikube dahsboard
 ```
-$ kubectl cluster-info
+$ kubectl dahsboard
 ```
 4. running service-deployment.yml file
 ```
 $ kubectl create -f service-deployment.yml
+```
+5. get minikube ip
+```
+$ minikube ip
 ```
 
 ## Services
