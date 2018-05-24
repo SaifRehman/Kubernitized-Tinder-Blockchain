@@ -19,9 +19,6 @@
 <br>
 
 
-## Contributors
-| [<img src="https://media.licdn.com/dms/image/C5603AQGqNuagFBJDQQ/profile-displayphoto-shrink_200_200/0?e=1532563200&v=beta&t=CCItySx0oYEV7tzTR6DiQ4ybh6dmwToQQy2_TCxU5rc" width="100px;"/><br /><sub><b>SaifRehman</b></sub>](https://www.linkedin.com/in/saif-ur-rehman/)<br />[💻]("Code") [📖]( "Documentation") [🤔](#ideas-keppel "Ideas, Planning, & Feedback") [⚠️]("Tests") | [<img src="https://media.licdn.com/dms/image/C5103AQHfEw0aX0CPJw/profile-displayphoto-shrink_800_800/0?e=1532563200&v=beta&t=SWLTO9FTwCBfdjd8pewRDJd8_EsT7nSv-ZY3rxC_oM8" width="100px;"/><br /><sub><b>Areej Essa</b></sub>](https://www.linkedin.com/in/areej-essa-b19336114/)<br />[💻]("Code") [🤔](#ideas-mappum "Ideas, Planning, & Feedback") [⚠️]("Tests") [🔌](#plugin-mappum "Plugin/utility libraries")
-| :---: | :---: |
 
 ## Pre Requisites
 1. Signup to [IBM Cloud](http://ibm.biz/ioblockchain)
