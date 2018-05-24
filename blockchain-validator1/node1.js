@@ -9,7 +9,7 @@ let app = lotion({
   logTendermint: true,
   keys: 'privkey0.json',
   createEmptyBlocks: true,
-  peers: ['192.168.1.102:30093']
+  peers: ['192.168.99.100:30093']
 })
 app.use((state, tx, chainInfo) => {
   if (tx[0].gender != tx[1].gender && Math.abs(tx[0].age - tx[1].age) <= 4) {
