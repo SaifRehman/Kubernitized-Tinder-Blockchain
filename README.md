@@ -77,9 +77,9 @@ $ minikube start
 ```
 $ kubectl cluster-info
 ```
-3. minikube dahsboard
+3. minikube dashboard
 ```
-$ kubectl dahsboard
+$ minikube dahsboard
 ```
 4. running service-deployment.yml file
 ```
